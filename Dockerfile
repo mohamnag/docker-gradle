@@ -4,7 +4,7 @@ MAINTAINER Mohammad Naghavi <mohamnag@gmail.com>
 ENV GRADLE_VERSION 2.6
 
 
-ADD https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-all.zip /usr/bin/gradle.zip
+ADD https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip /usr/bin/gradle.zip
 WORKDIR /usr/bin
 RUN apt-get install -y unzip && \
     unzip gradle.zip && \
