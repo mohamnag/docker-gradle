@@ -1,7 +1,7 @@
 FROM java:8
 MAINTAINER Mohammad Naghavi <mohamnag@gmail.com>
 
-ENV GRADLE_VERSION 2.6
+ENV GRADLE_VERSION 2.7
 
 
 ADD https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip /usr/bin/gradle.zip
