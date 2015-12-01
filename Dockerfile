@@ -22,6 +22,5 @@ ENV PATH $PATH:$GRADLE_HOME/bin
 VOLUME $GRADLE_USER_HOME
 VOLUME /app
 
-RUN mkdir /app
 WORKDIR /app
 CMD ["gradle", "-version"]
