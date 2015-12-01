@@ -2,7 +2,8 @@ FROM java:8
 MAINTAINER Mohammad Naghavi <mohamnag@gmail.com>
 
 ENV GRADLE_VERSION 2.9
-
+ENV GRADLE_HOME /usr/bin/gradle
+ENV GRADLE_USER_HOME /cache
 
 ADD https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip /usr/bin/gradle.zip
 WORKDIR /usr/bin
@@ -16,8 +17,7 @@ RUN apt-get remove -y unzip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*    
 
-ENV GRADLE_USER_HOME /usr/bin/gradle
-ENV PATH $PATH:$GRADLE_USER_HOME/bin
+ENV PATH $PATH:$GRADLE_HOME/bin
 
 # Default command is "/usr/bin/gradle -version" on /app dir
 # (ie. Mount project at /app "docker --rm -v /path/to/app:/app gradle <command>")
