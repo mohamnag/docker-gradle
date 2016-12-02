@@ -1,7 +1,7 @@
 FROM java:8
 MAINTAINER Mohammad Naghavi <mohamnag@gmail.com>
 
-ENV GRADLE_VERSION 3.1
+ENV GRADLE_VERSION 3.2
 ENV GRADLE_HOME /usr/bin/gradle
 ENV GRADLE_USER_HOME /cache
 
