@@ -1,4 +1,4 @@
-FROM java:8
+FROM openjdk:8
 MAINTAINER Mohammad Naghavi <mohamnag@gmail.com>
  
 ENV GRADLE_VERSION 4.0.1
